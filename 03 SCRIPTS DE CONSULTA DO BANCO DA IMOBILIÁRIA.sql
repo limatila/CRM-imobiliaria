@@ -1,4 +1,4 @@
-USE Imobiliaria2;
+USE Imobiliaria;
 
 --Verificando os dados disponíveis na tabela
 select table_name as 'Tabelas Disponíveis' from INFORMATION_SCHEMA.tables;
