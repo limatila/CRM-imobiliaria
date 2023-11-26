@@ -20,14 +20,12 @@ INSERT INTO Proprietarios (
     nome,
     telefone,
     endereco,
-    enderecosImoveis,
-    imoveisCEP,
     corretorCPF
 ) VALUES 
-('796.841.780-50','Thayline Pinheiro Guerini Stutz',69989243226,'Praça Nominando Zaguetti - São Carlos, SP','Rua Francisco Liza','13908-404','233.348.134-01'), 
-('161.349.582-04','Francisca Gabrig Sarmanto Knupp',92972872827,'Viela Jorge Brasil - Votorantim, SP','Rua Natasha Gabriela Aparecida Dias','18214-757','128.374.966-18'), 
-('704.852.842-78','Camille Bueno Muniz Muchão',89991126567,'Viela Sudão - Guarulhos, SP','Rua Victor Bombona','13324-506','525.329.899-12'), 
-('486.044.655-02','Carlos Vitorino da Paixão Giron',13988655176,'Travessa Padre Haroldo Coelho - Fortaleza, CE','Rua Gioconda Maria Zagui','13185-463','100.259.586-07');
+('796.841.780-50','Thayline Pinheiro Guerini Stutz',69989243226,'Praça Nominando Zaguetti - São Carlos, SP','233.348.134-01'), 
+('161.349.582-04','Francisca Gabrig Sarmanto Knupp',92972872827,'Viela Jorge Brasil - Votorantim, SP','128.374.966-18'), 
+('704.852.842-78','Camille Bueno Muniz Muchão',89991126567,'Viela Sudão - Guarulhos, SP','525.329.899-12'), 
+('486.044.655-02','Carlos Vitorino da Paixão Giron',13988655176,'Travessa Padre Haroldo Coelho - Fortaleza, CE','100.259.586-07');
 
 -- 3 Inserir dados na tabela "Imoveis"
 INSERT INTO Imoveis (
@@ -71,7 +69,3 @@ INSERT INTO Vendas (
 ('161.349.582-04','128.374.966-18',2,'23/03/2023'),
 ('704.852.842-78','525.329.899-12',3,'09/11/2023'),
 ('486.044.655-02','100.259.586-07',4,'14/06/2023');
-
-select * from Imoveis;
-select * from Vendas;
-select * from Proprietarios;

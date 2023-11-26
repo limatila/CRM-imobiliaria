@@ -25,8 +25,6 @@ CREATE TABLE Proprietarios (
     telefone BIGINT NOT NULL UNIQUE,
     endereco VARCHAR(MAX) NOT NULL,
     corretorCPF VARCHAR(15) NOT NULL,
-    enderecosImoveis VARCHAR(MAX) NOT NULL,
-    ImoveisCEP VARCHAR(100) NOT NULL,
     FOREIGN KEY (corretorCPF) REFERENCES Corretores(CPF)
 );
 
