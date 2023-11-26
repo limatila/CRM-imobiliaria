@@ -1,5 +1,15 @@
-USE Imobiliaria;
+USE Imobiliaria2;
 
+--Verificando os dados disponíveis na tabela
+select table_name as 'Tabelas Disponíveis' from INFORMATION_SCHEMA.tables;
+select * from Proprietarios;
+select * from Corretores;
+select * from Imoveis;
+select * from Vendas;
+select * from Influencers;
+select * from Marketing_Contratos
+
+--Agora alguns testes de uso cotidiano do Banco de Dados:
 --1. CONSULTAR OS NOMES DOS PROPRIETÁRIOS E O CÓDIGO DE SEUS IMÓVEIS;
 SELECT
     P.nome,
