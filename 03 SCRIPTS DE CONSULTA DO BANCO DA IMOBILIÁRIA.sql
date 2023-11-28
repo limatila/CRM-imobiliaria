@@ -12,7 +12,7 @@ select * from Marketing_Contratos
 --Agora alguns testes de uso cotidiano do Banco de Dados:
 --1. CONSULTAR OS NOMES DOS PROPRIETÁRIOS E O CÓDIGO DE SEUS IMÓVEIS;
 SELECT
-    P.nome,
+    P.nome as 'Nome do Proprietário',
     I.idImovel,
 	I.donoCPF
 FROM
@@ -56,8 +56,24 @@ INNER JOIN Influencers I ON M.id_influencer = I.idInfluencer;
 
 --5. CONSULTAR NOMES DOS CORRETORES E SEUS CLIENTES;
 SELECT
-    P.nome,
-    C.nome
+    P.nome as 'Nome do Proprietário',
+    C.nome as 'Nome de Corretor'
 FROM Proprietarios P INNER JOIN Corretores C ON P.corretorCPF = C.CPF; 
 
---6. CONSULTAR QUAIS VENDAS FORAM FEITAS PELOS CORRETORES PARA OS PROPRIETARIOS;
+--6. CONSULTAR QUAIS VENDAS FORAM FEITAS PELOS CORRETORES PARA OS PROPRIETARIOS (mostrando apenas nomes e id de venda);
+select 
+	V.idVenda,
+	P.nome,
+	C.nome
+from Proprietarios as P
+	INNER JOIN Vendas as V on P.CPF = V.CPF_Proprietario
+	INNER JOIN Corretores as C on C.CPF = V.CPF_Corretor;
+
+--7. MOSTRAR TEMPO (horas e minutos) TRABALHADO DE QUAL CORRETOR PARA QUAL PROPRIETARIO, DO MAIOR PARA O MENOR
+select
+	C.tempoTrabalho,
+	C.nome as 'Nome do Corretor',
+	P.nome as 'Nome do Proprietário'
+from Proprietarios as P
+	INNER JOIN Corretores as C on C.CPF = P.corretorCPF
+order by C.tempoTrabalho desc;
