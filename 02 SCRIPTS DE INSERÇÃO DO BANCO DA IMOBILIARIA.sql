@@ -86,4 +86,4 @@ SET tempoTrabalho = '07:08'
 UPDATE Corretores 
 SET tempoTrabalho = '03:12'
 	where nome like 'Emanuelle%';
-select nome, tempoTrabalho from Corretores;
+select nome, tempoTrabalho from Corretores; /* verificando mudança */
