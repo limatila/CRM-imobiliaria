@@ -69,3 +69,21 @@ INSERT INTO Vendas (
 ('161.349.582-04','128.374.966-18',2,'23/03/2023'),
 ('704.852.842-78','525.329.899-12',3,'09/11/2023'),
 ('486.044.655-02','100.259.586-07',4,'14/06/2023');
+
+-- 7 Adicionando dados de tempo trabalhado (antes nulos) em Corretores
+UPDATE Corretores 
+SET tempoTrabalho = '02:00'
+	where nome like 'Rejane%';
+
+UPDATE Corretores 
+SET tempoTrabalho = '12:37'
+	where nome like 'Jucemar%';
+
+UPDATE Corretores 
+SET tempoTrabalho = '07:08'
+	where nome like 'Thayanna%';
+
+UPDATE Corretores 
+SET tempoTrabalho = '03:12'
+	where nome like 'Emanuelle%';
+select nome, tempoTrabalho from Corretores;
