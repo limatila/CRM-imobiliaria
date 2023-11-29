@@ -7,7 +7,7 @@ select * from Corretores;
 select * from Imoveis;
 select * from Vendas;
 select * from Influencers;
-select * from Marketing_Contratos
+select * from Marketing_Contratos;
 
 --Agora alguns testes de uso cotidiano do Banco de Dados:
 --1. CONSULTAR OS NOMES DOS PROPRIETÁRIOS E O CÓDIGO DE SEUS IMÓVEIS;
